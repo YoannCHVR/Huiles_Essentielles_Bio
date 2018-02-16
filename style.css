@@ -1,0 +1,717 @@
+    @font-face {
+        font-family: Nexa;
+        src: url(fonts/NexaLight/NexaLight.woff);
+    }
+    
+    @font-face {
+        font-family: NexaBold;
+        src: url(fonts/NexaBold/NexaBold.woff);
+    }
+    /*---------------------------------*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .bold {
+        font-family: 'NexaBold', sans-serif;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    body {
+        margin: 0 auto;
+        overflow-x: hidden;
+        font-family: 'Nexa', sans-serif;
+        font-size: 0;
+        font-weight: 100;
+    }
+    /*---------NAV < 980px-----------*/
+    
+    .resoInf980 ul {
+        margin: 10vh 0 0 0;
+        padding: 0 35vw;
+    }
+    
+    .resoInf980 li {
+        list-style-type: none;
+        padding: 4vh 0;
+    }
+    
+    .resoInf980 a {
+        color: dimgrey;
+        font-size: 15pt;
+        text-decoration: none;
+        transition: .5s;
+    }
+    
+    .resoInf980 a:hover {
+        color: #12C080;
+        transition: .5s;
+    }
+    
+    #navigation {
+        width: 20vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 15vw;
+        z-index: 91;
+        display: none;
+    }
+    
+    #toggle-nav {
+        z-index: 90;
+        position: absolute;
+        top: 25px;
+        right: 0;
+        visibility: hidden;
+    }
+    
+    #navigation label {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        cursor: pointer;
+    }
+    
+    .open-nav {
+        color: white;
+    }
+    
+    #toggle-nav:checked~.open-nav {
+        color: transparent;
+    }
+    
+    .close-nav {
+        color: transparent;
+    }
+    
+    #toggle-nav:checked~.close-nav {
+        color: #12C080;
+        z-index: 99;
+    }
+    
+    .menu-nav {
+        background-color: transparent;
+        color: transparent;
+        text-align: center;
+        z-index: 84;
+        width: 68vw;
+        height: 100vh;
+        transition: .3s;
+        transform: translateX(100vw);
+        position: absolute;
+        top: 0;
+    }
+    
+    #toggle-nav:checked~.menu-nav {
+        background-color: rgba(255, 255, 255, 1);
+        color: grey;
+        z-index: 86;
+        transition: .3s;
+        transform: translateX(0vw);
+    }
+    
+    .material-icons {
+        font-size: 30px!important;
+    }
+    /*------------------------------------*/
+    
+    .logo {
+        position: absolute;
+        left: 7vw;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo img:first-child {
+        padding: 36px 13px 0 13px;
+        background-color: #12C080;
+    }
+    
+    .resoInf980 {
+        width: 40;
+        height: 40px;
+        font-size: 11px;
+        position: absolute;
+        top: 0;
+        right: 7vw;
+        z-index: 100000000;
+        display: none;
+    }
+    /*------------------------------------*/
+    
+    .offre {
+        background-color: #206477;
+        position: relative;
+        padding: 5px;
+        font-size: 13px;
+    }
+    
+    .offre p {
+        color: white;
+        text-align: center;
+    }
+    
+    .offre ul {
+        position: absolute;
+        top: 0;
+        right: 10vw;
+        display: flex;
+    }
+    
+    .offre ul li {
+        padding: 5px;
+    }
+    
+    .offre ul li a {
+        color: white;
+    }
+    
+    .offre ul li:first-child {
+        background-color: skyblue;
+        margin-right: 10px;
+    }
+    /*------------------------------------*/
+    
+    .clientInterface ul {
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px 10vw 30px 20vw;
+        background-color: white;
+    }
+    
+    .clientInterface ul li img {
+        width: 23px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    
+    .clientInterface ul li span {
+        font-weight: 700;
+        font-size: 10px;
+        color: white;
+        background: #12C080;
+        padding: 2px 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        bottom: 15px;
+        right: 10px;
+    }
+    
+    .clientInterface ul li input[type=text] {
+        font-style: italic;
+        font-size: 11px;
+        padding: 5px;
+        padding-left: 20px;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border: 1px solid gray;
+        border-right: none;
+        font-size: 11px;
+    }
+    
+    .clientInterface ul li button {
+        border: 0px;
+        background-color: #12C080;
+        border: 1px solid #12C080;
+        border-left: none;
+        padding: 5px;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+        border-top-right-radius: 3px;
+        font-size: 11px;
+    }
+    /*------------------------------------*/
+    
+    nav.resoSup980 ul {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10vw 30px 25vw;
+        background-color: white;
+    }
+    
+    nav.resoSup980 ul li a {
+        font-size: 10px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    /*------------------------------------*/
+    
+    .banner {
+        position: relative;
+        padding: 10vh 15vw;
+        background-image: url('images/slide.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+    }
+    
+    .banner .slideContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .banner .slideContent img {
+        width: auto;
+        cursor: pointer;
+    }
+    
+    .banner .slideContent img:nth-child(4) {
+        filter: grayscale(100%);
+    }
+    
+    .banner .slideContent .bannerContent {
+        width: 40%;
+    }
+    
+    .banner .slideContent .bannerContent h2 {
+        font-size: 30px;
+        font-family: 'NexaBold', sans-serif;
+    }
+    
+    .banner .slideContent .bannerContent h2:nth-child(1) img {
+        width: auto;
+        position: inherit;
+    }
+    
+    .banner .slideContent .bannerContent p {
+        margin: 10px 0;
+        font-size: 11px;
+    }
+    
+    .banner .slideContent .bannerContent button {
+        border: 0;
+        border-radius: 3px;
+        border-bottom-right-radius: 0;
+        font-weight: bold;
+        padding: 10px 15px;
+        color: #A2ABAA;
+        cursor: pointer;
+        background-color: white;
+        float: right;
+    }
+    
+    .bottom_scroll {
+        margin: 0 auto;
+        position: relative;
+        top: -25px;
+        width: 50px;
+        height: 50px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    /*-----MAIN-----*/
+    
+    main {
+        font-size: 13px;
+        position: relative;
+    }
+    
+    main section {
+        padding: 0 12vw;
+    }
+    
+    main section article {
+        margin-bottom: 50px;
+    }
+    
+    main section article ul {
+        display: flex;
+    }
+    
+    main section article ul .logo_title {
+        flex: 0.4;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    main section article ul .logo_title h3 {
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-family: 'NexaBold', sans-serif;
+        color: #302637;
+        position: absolute;
+        margin-top: 50px;
+        margin-left: -75px;
+    }
+    
+    main section:nth-child(4) article ul .logo_title h3 {
+        margin-top: 30px;
+    }
+    
+    main section article ul ul {
+        flex: 0.6;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    main section article ul ul li.productContent {
+        width: 25%;
+        padding: 0 20px;
+    }
+    
+    main section.network {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    main section.network img {
+        cursor: pointer;
+        margin: 10px 30px;
+    }
+    
+    main section.separation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -35px;
+        padding: 100px 12vw;
+    }
+    
+    main section.separation hr {
+        width: 100%;
+        border: 0.5px solid gray;
+    }
+    
+    main section.separation img {
+        width: 40px;
+        padding: 1vw;
+        background: white;
+        position: relative;
+        z-index: 1;
+        top: -35px;
+        filter: grayscale();
+    }
+    
+    main section:nth-child(4) {
+        padding-bottom: 10vh;
+    }
+    
+    main section article ul ul li h4 {
+        display: flex;
+        font-family: 'NexaBold', sans-serif;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 3px 0;
+    }
+    
+    main section article ul ul li .productImg {
+        background: white;
+        border-bottom: 3px solid #F5DBC0;
+        width: 100%;
+    }
+    
+    main .productService:nth-child(4) article ul ul li .productImg {
+        background: white;
+        border-bottom: 3px solid #C1E8D7;
+    }
+    
+    main section article ul ul li .priceBuy {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    
+    main section article ul ul li .priceBuy li p {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 15px;
+        color: #12C080;
+    }
+    
+    main section article ul ul li .priceBuy .productBuy img {
+        position: relative;
+        left: 1vw;
+    }
+    
+    main section article ul ul .priceBuy .productBuy span {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 15px;
+        color: white;
+        background: #12C080;
+        padding: 0 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: relative;
+        bottom: 15px;
+    }
+    /*--------------ENGAGEMENT-------------*/
+    
+    main .engagementBioleum {
+        display: flex;
+        background-color: #12C080;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    
+    main .engagementBioleum img {
+        position: relative;
+        top: -60px;
+    }
+    
+    main .engagementBioleum article {
+        padding: 0 0 0 5vh;
+    }
+    
+    main .engagementBioleum article h3 {
+        font-family: 'NexaBold', sans-serif;
+        font-size: 20px;
+        line-height: 40px;
+        color: white;
+        margin-bottom: 10px;
+    }
+    
+    main .engagementBioleum article p {
+        color: white;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    /*-------------------------------*/
+    
+    main section:nth-child(6) {
+        background: #206477;
+        display: flex;
+        padding: 5vh 12vw;
+        justify-content: space-between;
+    }
+    
+    main section:nth-child(6) article {
+        max-width: 35vw;
+        margin: 0;
+    }
+    
+    main section:nth-child(6) article h3 {
+        color: white;
+        font-family: 'NexaBold', sans-serif;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    main section:nth-child(6) article p {
+        color: white;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    /*--------------FOOTER----------------*/
+    
+    footer {
+        padding: 5vh 12vw 0 12vw;
+        font-size: 12px;
+    }
+    
+    footer section:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: -35px;
+    }
+    
+    footer section:first-child hr {
+        width: 20vw;
+        border: 0.5px solid #12C080;
+    }
+    
+    footer section:first-child img {
+        width: 40px;
+        padding: 1vw;
+        background: white;
+        position: relative;
+        z-index: 1;
+        top: -35px;
+    }
+    
+    footer section:nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+    }
+    
+    footer section:nth-child(2) article {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer section:nth-child(2) article:nth-child(1) {
+        flex: 0.6;
+    }
+    
+    footer section:nth-child(2) article:nth-child(2) {
+        flex: 0.4;
+        margin-top: -30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer section:nth-child(2) article h4 {
+        text-transform: uppercase;
+        margin: 10px 0;
+        max-width: 10vw;
+    }
+    
+    footer section:nth-child(2) article ul hr {
+        max-width: 10vw;
+    }
+    
+    footer section:nth-child(2) article ul li {
+        margin: 10px 0;
+        margin-right: 20px;
+    }
+    
+    footer section:nth-child(2) article h5 {
+        position: relative;
+        font-family: 'NexaBold', sans-serif;
+        top: 100px;
+        font-size: 30px;
+    }
+    
+    footer section:nth-child(2) article span {
+        position: relative;
+        bottom: 120px;
+    }
+    
+    .legacies {
+        text-transform: uppercase;
+        padding: 0.5vh;
+        background: #206477;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+    }
+    /*-------MEDIA QUERIES------*/
+    
+    @media screen and (max-width: 980px) {
+        /*HEADER*/
+        .clientInterface ul {
+            justify-content: center;
+            padding: 30px 0;
+        }
+        .offre {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .offre ul {
+            position: inherit;
+            right: 0;
+            margin-top: 10px;
+        }
+        .offre p {
+            max-width: 40vw;
+        }
+        .resoSup980 {
+            display: none;
+        }
+        .resoInf980 {
+            display: flex;
+        }
+        #navigation {
+            display: block;
+        }
+        .banner {
+            padding: 10vh 10vw;
+        }
+        /*MAIN*/
+        main section article ul {
+            flex-direction: column;
+            align-items: center;
+        }
+        main section article ul .logo_title {
+            position: relative;
+            top: 50px;
+            flex: 0;
+            align-items: stretch;
+        }
+        main section article ul .logo_title h3 {
+            top: 55px;
+        }
+        main section article ul ul {
+            margin-top: 100px;
+        }
+        main section article ul ul li {
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+        }
+        main section article ul ul li .priceBuy {
+            flex-direction: row;
+        }
+        main section article ul ul li .priceBuy li,
+        main section article ul ul h4,
+        main section article ul ul h5 {
+            margin: 0 10px;
+        }
+        main section:nth-child(4) article ul .logo_title h3 {
+            top: 45px;
+        }
+        main section:nth-child(6) {
+            flex-direction: column;
+        }
+        main section:nth-child(6) article {
+            max-width: inherit;
+        }
+        main section:nth-child(6) article:first-child {
+            margin-bottom: 30px;
+        }
+        main .engagementBioleum article {
+            margin-bottom: 30px;
+        }
+        main section article ul ul li.productContent {
+            width: inherit;
+        }
+        main section article ul ul li .productImg {
+            width: auto;
+        }
+        /*FOOTER*/
+        footer section:nth-child(2) {
+            flex-direction: column;
+        }
+        footer section:nth-child(2) article:first-child {
+            width: 70%;
+            flex: 0;
+            justify-content: space-around;
+            align-items: center;
+            margin: 3vw 0;
+        }
+        footer section:nth-child(2) article h4 {
+            max-width: 15vw;
+        }
+        footer section:nth-child(2) article ul:first-child {
+            display: none;
+        }
+        footer section:nth-child(2) article ul:nth-child(3) {
+            padding-left: 5vw;
+        }
+    }
+    
+    @media screen and (max-width: 800px) {
+        main .engagementBioleum img {
+            display: none;
+        }
+        
+        main .engagementBioleum article {
+            margin: 0;
+            padding: 5vh 0;
+        }
+}

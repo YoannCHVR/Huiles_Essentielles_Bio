@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'NexaLight';
+  src: url('NexaLight.eot?#iefix') format('embedded-opentype'),  url('NexaLight.otf')  format('opentype'),
+	     url('NexaLight.woff') format('woff'), url('NexaLight.ttf')  format('truetype'), url('NexaLight.svg#NexaLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
